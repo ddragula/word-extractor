@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {CssBaseline, ThemeProvider} from "@material-ui/core";
+
+import App from './components/App';
+import light from "./themes/light";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ThemeProvider theme={light}>
+          <CssBaseline />
+          <App />
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,6 +1,19 @@
 import React from 'react';
-import {Container, Typography} from "@material-ui/core";
+import {Container, Link, Typography} from "@material-ui/core";
 import footerStyles from "./footerStyles";
+
+function Copyright() {
+    return (
+        <Typography variant="body2" color="textSecondary" align="center">
+            {'Copyright © '}
+            <Link color="inherit" href="https://github.com/Vazonik/" target="_blank">
+                Dawid Draguła
+            </Link>{' '}
+            {new Date().getFullYear()}
+            {'.'}
+        </Typography>
+    );
+}
 
 function Footer() {
     const classes = footerStyles();
@@ -8,8 +21,8 @@ function Footer() {
     return (
         <footer className={classes.root}>
             <Container>
-                <Typography variant="body1">My sticky footer can be found here.</Typography>
-                Test
+                <Typography align="center" variant="body1">Made with ♥ by Vazonik</Typography>
+                <Copyright />
             </Container>
         </footer>
     );

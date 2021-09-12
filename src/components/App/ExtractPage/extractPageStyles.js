@@ -16,7 +16,10 @@ const extractPageStyles = makeStyles(theme => ({
     buttonDiv: {
         display: 'flex',
         flexDirection: 'row-reverse',
-        marginTop: theme.spacing(1)
+        marginTop: theme.spacing(1),
+        "& > *": {
+            marginLeft: theme.spacing(1)
+        }
     }
 }));
 

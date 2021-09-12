@@ -1,10 +1,11 @@
-export default function extraction(text) {
-    return collectWords(text);
+export default function extraction(text, threshold) {
+    let words = collectWords(text);
+    return convertToArray(words, threshold).sort((a, b) => b.repeats - a.repeats);
 }
 
 function collectWords(text) {
     let words = {};
-    text.split(/[ \/\\.,()]/g).forEach(rawWord => {
+    text.split(/[ \/\\.,()\r\n]/g).forEach(rawWord => {
         const word = rawWord.toLowerCase().replace(/[\-;"'\r\n]/g, '');
         if(isWordAcceptable(word)) {
             if(words[word]) {
@@ -33,4 +34,16 @@ function isWordAcceptable(word) {
     }
 
     return true;
+}
+
+function convertToArray(wordsObject, threshold) {
+    return Object.entries(wordsObject).reduce((prev, [key, value]) => {
+        if (value > threshold) {
+            prev.push({
+                word: key,
+                repeats: value
+            });
+        }
+        return prev;
+    }, []);
 }

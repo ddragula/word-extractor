@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {HashRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import Layout from "../Layout/Layout";
 import StartPage from "./StartPage/StartPage";
@@ -6,6 +6,12 @@ import ExtractPage from "./ExtractPage/ExtractPage";
 import ResultPage from "./ResultPage/ResultPage";
 
 function App() {
+    const [wordsArray, setWordsArray] = useState([]);
+
+    const extractWordsHandler = words => {
+        setWordsArray(words);
+    }
+
     return (
         <Router>
             <Layout>
@@ -14,10 +20,10 @@ function App() {
                         <StartPage />
                     </Route>
                     <Route path="/extract">
-                        <ExtractPage />
+                        <ExtractPage extractWordsHandler={extractWordsHandler} />
                     </Route>
                     <Route path="/result">
-                        <ResultPage />
+                        <ResultPage words={wordsArray} />
                     </Route>
                     <Route exact path="/">
                         <Redirect to="/start" />

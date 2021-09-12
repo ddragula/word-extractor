@@ -2,22 +2,17 @@ import React, {useState} from 'react';
 import {Button, TextareaAutosize, Typography} from "@material-ui/core";
 import extractPageStyles from "./extractPageStyles";
 import PlayForWorkIcon from '@material-ui/icons/PlayForWork';
+import extraction from "../../../helpers/extraction";
 
 function ExtractPage() {
-    const [ submitButtonDisabled, setSubmitButtonDisabled ] = useState(true);
+    const [ text, setText ] = useState("");
 
     const textAreaChangeHandler = e => {
-        if (e.target.value) {
-            if (submitButtonDisabled === true)
-            {
-                setSubmitButtonDisabled(false);
-            }
-        } else {
-            if (submitButtonDisabled === false)
-            {
-                setSubmitButtonDisabled(true);
-            }
-        }
+        setText(e.target.value);
+    }
+
+    const extractHandler = () => {
+        console.log(extraction(text));
     }
 
     const classes = extractPageStyles();
@@ -29,7 +24,7 @@ function ExtractPage() {
             </Typography>
             <TextareaAutosize className={classes.textarea} onChange={textAreaChangeHandler} minRows={6} maxRows={26} />
             <div className={classes.buttonDiv}>
-                <Button variant="contained" color="primary" size="large" disabled={submitButtonDisabled}>
+                <Button variant="contained" color="primary" size="large" disabled={text === ""} onClick={extractHandler}>
                     Extract Words <PlayForWorkIcon />
                 </Button>
             </div>

@@ -3,11 +3,12 @@ import {HashRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import Layout from "../Layout/Layout";
 import StartPage from "./StartPage/StartPage";
 import ExtractPage from "./ExtractPage/ExtractPage";
+import ResultPage from "./ResultPage/ResultPage";
 
 function App() {
     return (
-        <Layout>
-            <Router>
+        <Router>
+            <Layout>
                 <Switch>
                     <Route path="/start">
                         <StartPage />
@@ -15,12 +16,15 @@ function App() {
                     <Route path="/extract">
                         <ExtractPage />
                     </Route>
+                    <Route path="/result">
+                        <ResultPage />
+                    </Route>
                     <Route exact path="/">
                         <Redirect to="/start" />
                     </Route>
                 </Switch>
-            </Router>
-        </Layout>
+            </Layout>
+        </Router>
     );
 }
 

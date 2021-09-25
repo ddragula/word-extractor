@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Container, Grid, Typography} from "@material-ui/core";
 import startPageStyles from "./startPageStyles";
 import {Link} from "react-router-dom";
+import LinkButton from "../../Layout/LinkButton/LinkButton";
 
 function StartPage() {
     const classes = startPageStyles();
@@ -19,9 +20,7 @@ function StartPage() {
             <Container maxWidth="sm" className={classes.buttonsContainer}>
                 <Grid container spacing={5} alignItems="flex-end">
                     <Grid item xs={12} sm={6}>
-                        <Link to="/extract">
-                            <Button color="primary" variant="contained" fullWidth size="large">Start with a text</Button>
-                        </Link>
+                        <LinkButton to="/extract" color="primary" variant="contained" fullWidth size="large">Start with a text</LinkButton>
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Button color="primary" variant="contained" fullWidth size="large" disabled>Load saved words</Button>

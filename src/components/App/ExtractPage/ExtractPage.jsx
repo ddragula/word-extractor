@@ -4,6 +4,7 @@ import extractPageStyles from "./extractPageStyles";
 import PlayForWorkIcon from '@material-ui/icons/PlayForWork';
 import extraction from "../../../helpers/extraction";
 import {Link} from "react-router-dom";
+import LinkButton from "../../Layout/LinkButton/LinkButton";
 
 function ExtractPage({ extractWordsHandler }) {
     const [ text, setText ] = useState("");
@@ -42,18 +43,16 @@ function ExtractPage({ extractWordsHandler }) {
                 value={text}
             />
             <div className={classes.buttonDiv}>
-                <Link to="/result">
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        size="large"
-                        disabled={text === ""}
-                        onClick={extractHandler}
-                        style={{height: '100%'}}
-                    >
-                        Extract Words <PlayForWorkIcon />
-                    </Button>
-                </Link>
+                <LinkButton
+                    to="/result"
+                    variant="contained"
+                    color="secondary"
+                    size="large"
+                    disabled={text === ""}
+                    onClick={extractHandler}
+                >
+                    Extract Words <PlayForWorkIcon />
+                </LinkButton>
                 <TextField
                     label="Threshold"
                     type="number"

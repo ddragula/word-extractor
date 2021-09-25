@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/word-extractor/static/js/main.b1b5ee07.chunk.js",
-    "main.js.map": "/word-extractor/static/js/main.b1b5ee07.chunk.js.map",
+    "main.js": "/word-extractor/static/js/main.c2e20fe1.chunk.js",
+    "main.js.map": "/word-extractor/static/js/main.c2e20fe1.chunk.js.map",
     "runtime-main.js": "/word-extractor/static/js/runtime-main.68fd888e.js",
     "runtime-main.js.map": "/word-extractor/static/js/runtime-main.68fd888e.js.map",
-    "static/js/2.4670fda0.chunk.js": "/word-extractor/static/js/2.4670fda0.chunk.js",
-    "static/js/2.4670fda0.chunk.js.map": "/word-extractor/static/js/2.4670fda0.chunk.js.map",
+    "static/js/2.8349d89d.chunk.js": "/word-extractor/static/js/2.8349d89d.chunk.js",
+    "static/js/2.8349d89d.chunk.js.map": "/word-extractor/static/js/2.8349d89d.chunk.js.map",
     "index.html": "/word-extractor/index.html",
-    "static/js/2.4670fda0.chunk.js.LICENSE.txt": "/word-extractor/static/js/2.4670fda0.chunk.js.LICENSE.txt"
+    "static/js/2.8349d89d.chunk.js.LICENSE.txt": "/word-extractor/static/js/2.8349d89d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.68fd888e.js",
-    "static/js/2.4670fda0.chunk.js",
-    "static/js/main.b1b5ee07.chunk.js"
+    "static/js/2.8349d89d.chunk.js",
+    "static/js/main.c2e20fe1.chunk.js"
   ]
 }

@@ -49,7 +49,7 @@ function ExtractPage({ extractWordsHandler }) {
                     color="secondary"
                     size="large"
                     disabled={text === ""}
-                    onClick={extractHandler}
+                    beforeRedirect={extractHandler}
                 >
                     Extract Words <PlayForWorkIcon />
                 </LinkButton>

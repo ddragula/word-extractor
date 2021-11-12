@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/word-extractor/static/js/main.de435e30.chunk.js",
-    "main.js.map": "/word-extractor/static/js/main.de435e30.chunk.js.map",
+    "main.js": "/word-extractor/static/js/main.ce822909.chunk.js",
+    "main.js.map": "/word-extractor/static/js/main.ce822909.chunk.js.map",
     "runtime-main.js": "/word-extractor/static/js/runtime-main.68fd888e.js",
     "runtime-main.js.map": "/word-extractor/static/js/runtime-main.68fd888e.js.map",
     "static/js/2.af0ec209.chunk.js": "/word-extractor/static/js/2.af0ec209.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.68fd888e.js",
     "static/js/2.af0ec209.chunk.js",
-    "static/js/main.de435e30.chunk.js"
+    "static/js/main.ce822909.chunk.js"
   ]
 }

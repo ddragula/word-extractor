@@ -10,7 +10,7 @@ function Copyright() {
         Dawid Draguła
       </Link>{" "}
       {new Date().getFullYear()}
-      {" | v0.1.1"}
+      {" | v0.1.2"}
     </Typography>
   );
 }

@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import {
-  Button,
-  TextareaAutosize,
-  TextField,
-  Typography,
-} from "@material-ui/core";
+import { TextareaAutosize, TextField, Typography } from "@material-ui/core";
 import extractPageStyles from "./extractPageStyles";
 import PlayForWorkIcon from "@material-ui/icons/PlayForWork";
 import extraction from "../../../helpers/extraction";
-import { Link } from "react-router-dom";
 import LinkButton from "../../Layout/LinkButton/LinkButton";
 
 function ExtractPage({ extractWordsHandler }) {

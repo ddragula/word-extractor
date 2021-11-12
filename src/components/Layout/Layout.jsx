@@ -1,6 +1,6 @@
 import React from "react";
 import layoutStyles from "./layoutStyles";
-import { Container, Typography } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Heder";
 

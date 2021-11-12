@@ -14,9 +14,9 @@ function App() {
   const [wordsArray, setWordsArray] = useState([]);
 
   useEffect(() => {
-    if (wordsArray.length < 1) {
+    if (wordsArray?.length < 1) {
       const backupWords = JSON.parse(localStorage.getItem("words"));
-      if (backupWords.length) {
+      if (backupWords?.length > 1) {
         setWordsArray(backupWords);
       }
     }

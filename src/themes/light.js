@@ -1,7 +1,7 @@
 import { createTheme } from "@material-ui/core";
 
 export default createTheme({
-    palette: {
-        type: "light"
-    }
+  palette: {
+    type: "light",
+  },
 });

@@ -1,9 +1,9 @@
-import {makeStyles} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
-const resultPageStyles = makeStyles(theme => ({
-    tableContainer: {
-        maxHeight: '700px'
-    }
+const resultPageStyles = makeStyles((theme) => ({
+  tableContainer: {
+    maxHeight: "700px",
+  },
 }));
 
 export default resultPageStyles;

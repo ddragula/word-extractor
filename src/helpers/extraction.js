@@ -5,7 +5,7 @@ export default function extraction(text, threshold) {
 
 function collectWords(text) {
   let words = {};
-  text.split(/[/\\.,(){}\r\n]/g).forEach((rawWord) => {
+  text.split(/[ /\\.,(){}\r\n]/g).forEach((rawWord) => {
     const word = rawWord.toLowerCase();
     if (isWordAcceptable(word)) {
       if (words[word]) {

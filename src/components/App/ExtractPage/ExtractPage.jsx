@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TextareaAutosize, TextField, Typography } from "@material-ui/core";
 import extractPageStyles from "./extractPageStyles";
 import PlayForWorkIcon from "@material-ui/icons/PlayForWork";
@@ -9,8 +9,23 @@ function ExtractPage({ extractWordsHandler }) {
   const [text, setText] = useState("");
   const [threshold, setThreshold] = useState(0);
 
+  useEffect(() => {
+    const backupText = localStorage.getItem("text");
+    const backupThreshold = localStorage.getItem("threshold");
+
+    if (backupText) {
+      setText(backupText);
+    }
+
+    if (backupThreshold) {
+      setThreshold(backupThreshold);
+    }
+  }, []);
+
   const textAreaChangeHandler = (e) => {
-    setText(e.target.value);
+    const newText = e.target.value;
+    setText(newText);
+    localStorage.setItem("text", newText);
   };
 
   const thresholdChangeHandler = (e) => {
@@ -19,6 +34,7 @@ function ExtractPage({ extractWordsHandler }) {
     if (value > 9999) value = 9999;
 
     setThreshold(value);
+    localStorage.setItem("threshold", value);
   };
 
   const extractHandler = () => {

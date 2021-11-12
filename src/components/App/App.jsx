@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   HashRouter as Router,
   Redirect,
@@ -13,8 +13,18 @@ import ResultPage from "./ResultPage/ResultPage";
 function App() {
   const [wordsArray, setWordsArray] = useState([]);
 
+  useEffect(() => {
+    if (wordsArray.length < 1) {
+      const backupWords = JSON.parse(localStorage.getItem("words"));
+      if (backupWords.length) {
+        setWordsArray(backupWords);
+      }
+    }
+  }, [wordsArray]);
+
   const extractWordsHandler = (words) => {
     setWordsArray(words);
+    localStorage.setItem("words", JSON.stringify(words));
   };
 
   return (

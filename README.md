@@ -1,1 +1,1 @@
-https://vazonik.github.io/word-extractor/#/start
+https://ddragula.github.io/word-extractor/#/start
